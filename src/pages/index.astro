@@ -1,6 +1,8 @@
 ---
 console.log("Hola");
+import Card from '../components/Card.astro'
 import '../styles/css/index.css'
+
 ---
 
 <html lang="es">
@@ -9,10 +11,14 @@ import '../styles/css/index.css'
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
+		<title>Js Technologies</title>
 	</head>
 	<body>
-		<h1 class="title">Astro</h1>
+		<h1 class="title">Js Technologies</h1>
+		<ul>
+			<Card />
+			<Card />
+		</ul>
 	</body>
 </html>
 
