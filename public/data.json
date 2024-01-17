@@ -1,0 +1,89 @@
+[
+    {
+        "id":1,
+        "title": "React",
+        "slug": "React es sin duda uno de los frameworks front-end más conocidos del mercado.",
+        "subtitle": "React es una biblioteca basada en componentes JavaScript que presenta sintaxis JSX.",
+        "description": "Se convirtió en una biblioteca de código abierto en 2013, el proceso de desarrollo que hizo que React fuera un poco diferente de la definición clásica de frameworks front-end.",
+        "content": "Más de 3 millones de usuarios activos aprovechan React. Hay una gran comunidad detrás del marco que lo respalda. Casi el 80 por ciento de los desarrolladores competentes han tenido una experiencia positiva y sencilla con React al menos una vez en sus proyectos de desarrollo.",
+        "image":"https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/React.svg/1024px-React.svg.png",
+        "url":"https://es.react.dev/",
+        "github":"https://github.com/formio/react"
+    },
+	{
+        "id":2,
+        "title": "Angular",
+        "slug": "La biblioteca para interfaces de usuario web y nativas",
+        "subtitle": "Angular, también conocido como Angular 2+, es una de las herramientas de desarrollo de software más populares en la actualidad.",
+        "description": "Es un marco de interfaz de usuario moderno y de código abierto que funciona en base a TypeScript. Angular se suele utilizar para el desarrollo de aplicaciones web y móviles. Es fácil crear aplicaciones web de una o varias páginas utilizando Angular.",
+        "image":"https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Angular_full_color_logo.svg/1024px-Angular_full_color_logo.svg.png",
+        "url":"https://angular.io/",
+        "github":"https://github.com/angular/angular"
+    },
+	{
+        "id":3,
+        "title": "Astro",
+        "slug": "El generador más usado para sitios estáticos",
+        "subtitle": "Astro se ha convertido rápidamente en uno de los favoritos de la comunidad de desarrolladores. Es un framework todo en uno que funciona como un generador de sitios estáticos.",
+        "description": "Astro viene con potentes herramientas que aumentan drásticamente la flexibilidad de tu sitio, ahorrándote horas en la gestión de contenidos y temas.",
+        "content": "Además, ofrece a los desarrolladores la opción de trabajar con sus frameworks preferidos a la vez que con Astro — una perspectiva atractiva para los programadores experimentados que ya cuentan con un gran número de favoritos.",
+        "image":"https://astro.js.org/astro.png",
+        "url":"https://astro.build/",
+        "github":"https://github.com/withastro/astro"
+    },
+	{
+        "id":4,
+        "title": "Semantic UI",
+        "slug": "Semantic UI es bastante nueva en el mercado de frameworks front-end.",
+        "subtitle": "Es un marco para CSS, diseñado en base a la sintaxis del lenguaje orgánico. La interfaz de usuario semántica se introdujo en 2014 y actualmente es uno de los principales marcos de JavaScript en GitHub.",
+        "description": "Aunque la comunidad detrás de Semantic UI es bastante pequeña, es muy leal y activa. Han creado miles de temas y numerosos componentes para la interfaz de usuario y enviaron miles de confirmaciones a GitHub.",
+        "content": "La interfaz de usuario semántica tiene como objetivo proporcionar HTML amigable para los humanos; Las clases en el marco pueden adoptar la sintaxis de los lenguajes humanos con relaciones orgánicas entre sustantivo/modificador, orden de palabras y popularidad que ayuda a los desarrolladores a vincular conceptos de forma natural.",
+        "image":"https://whatthelogo.com/storage/logos/semantic-ui-274407.png",
+        "url":"https://semantic-ui.com/",
+        "github":"https://github.com/Semantic-Org/Semantic-UI"
+    },
+	{
+        "id":5,
+        "title": "Ember",
+        "slug": "Ember, un marco web JavaScript de código abierto MVVM",
+        "subtitle": "Ember es uno de los frameworks front-end más rápidos a la hora de renderizar el lado del servidor.",
+        "description": "Proporciona enlace de datos bidireccional, sincronizando la vista y el modelo en tiempo real. Viene con un enorme ecosistema con plantillas avanzadas para ayudar a los desarrolladores a acortar la codificación.",
+        "content": "La plataforma ofrece innumerables funciones potentes desde el primer día, pero si necesita más, puede utilizar los innumerables complementos de la comunidad.",
+        "image":"https://blog.emberjs.com/images/logos/e-icon.png",
+        "url":"https://emberjs.com/",
+        "github":"https://github.com/emberjs/ember.js"
+    },
+	{
+        "id":6,
+        "title": "VueJs",
+        "slug": "Vue ofrece un rendimiento de alta velocidad gracias a su DOM virtual",
+        "subtitle": "Es interesante saber que, según se informa, el 40 por ciento de los desarrolladores han probado Vue.js al menos una vez en sus carreras",
+        "description": "se han diseñado más de 700.000 aplicaciones web con la ayuda de este marco de interfaz de usuario, incluidas marcas populares como Alibaba, Reuters, 9gag, Xiaomi y Ride Receipts.",
+        "content": "Con documentación bien explicada y una comunidad de apoyo, es fácil trabajar con Vue y es mucho más sencillo acostumbrarse que Angular y muchos otros frameworks front-end, y es conocido como uno de los frameworks más amigables para principiantes.",
+        "image":"https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Vue.js_Logo_2.svg/1024px-Vue.js_Logo_2.svg.png",
+        "url":"https://vuejs.org/",
+        "github":"https://github.com/vuejs/core"
+    },
+	{
+        "id":7,
+        "title": "BackBone",
+        "slug": "Backbone sigue un concepto de desarrollo MVC/MVP.",
+        "subtitle": "Representa sus datos como modelos que pueden crearse, validarse, eliminarse y guardarse en el servidor.",
+        "description": "Cada vez que una acción específica de la interfaz de usuario realiza cambios en un atributo de un modelo, el modelo produce un evento de cambio. Luego, este cambio se transfiere a todas las vistas que reflejan el estado del modelo.",
+        "content": "Cuando se cambia el modelo en Backbone, los cambios se aplican automáticamente a la vista, por lo que no es necesario actualizar manualmente el HTML ni escribir código especial que busque en el DOM elementos con ciertos ID.",
+        "image":"https://images.versus.io/objects/backbone-js.front.variety.1576684641045.jpg",
+        "url":"https://es.react.dev/",
+        "github":"https://github.com/formio/react"
+    },
+	{
+        "id":7,
+        "title": "JQuery",
+        "slug": "JQuery es uno de los frameworks front-end de JavaScript de código abierto más antiguos del mercado.",
+        "subtitle": "A pesar de eso, todavía se encuentra entre los mejores marcos en 2024, ya que ofrece condiciones de desarrollo modernas.",
+        "description": "JQuery ha sido diseñado para minimizar la tediosa codificación JavaScript y brindarle simplicidad además del poderoso soporte de una gran comunidad.",
+        "content": "El marco se ha utilizado para ejecutar numerosos proyectos importantes, incluidos Twitter, Microsoft, Uber, Kickstarter, Pandora, SurveyMonkey y muchos otros. La simplicidad de JQuery lo hace versátil en el manejo de eventos.",
+        "image":"https://store.shopware.com/media/image/8b/8f/e3/file646cb188c7fb8.png",
+        "url":"https://jquery.com/",
+        "github":"https://github.com/jquery/jquery"
+    }
+]
