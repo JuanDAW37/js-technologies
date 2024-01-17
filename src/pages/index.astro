@@ -3,7 +3,12 @@ console.log("Hola");
 import Header from '../components/Header.astro';
 import Card from '../components/Card.astro'
 import '../styles/css/index.css'
+//Sin fetch (Sin Fetching de data)
+//import {data} from "../utils/dataUtils"
 
+//Fetching de data
+const response = await fetch('http://localhost:4321/data.json');
+const data=await response.json();
 ---
 
 <html lang="es">
@@ -20,8 +25,13 @@ import '../styles/css/index.css'
 			<h1>Js Technologies</h1>
 			<div class="container px-4 mx-auto flex flex-col gap-8">
 				<ul class="grid grid-cols-[repeat(auto-fit,minmax(320px,1fr))] gap-6">
-					<Card />
-					<Card />
+					<!--Recorremos data, con JavaScript para presentar la Card depediendo de los datos que haya.
+					Por cada elemento, indicando que es un object recuperado de la data, se devuelve un Card al que se le pasa los valores de elemento-->
+					{
+						data.map((elemento:object) => {
+							return <Card data={elemento}/>
+						})
+					}
 				</ul>
 			</div>
 		</section>		
