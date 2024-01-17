@@ -1,41 +1,28 @@
 ---
 console.log("Hola");
-import Header from '../components/Header.astro';
-import Card from '../components/Card.astro'
-import '../styles/css/index.css'
+import Layout from "../layouts/Layout.astro";
+import Card from "../components/Card.astro";
+import "../styles/css/index.css";
 //Sin fetch (Sin Fetching de data)
 //import {data} from "../utils/dataUtils"
 
 //Fetching de data
-const response = await fetch('http://localhost:4321/data.json');
-const data=await response.json();
+const response = await fetch("http://localhost:4321/data.json");
+const data = await response.json();
 ---
 
-<html lang="es">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Js Technologies</title>
-	</head>
-	<body>
-		<Header />			
-		<section class="py-20">
-			<h1>Js Technologies</h1>
-			<div class="container px-4 mx-auto flex flex-col gap-8">
-				<ul class="grid grid-cols-[repeat(auto-fit,minmax(320px,1fr))] gap-6">
-					<!--Recorremos data, con JavaScript para presentar la Card depediendo de los datos que haya.
-					Por cada elemento, indicando que es un object recuperado de la data, se devuelve un Card al que se le pasa los valores de elemento-->
-					{
-						data.map((elemento:object) => {
-							return <Card data={elemento}/>
-						})
-					}
-				</ul>
-			</div>
-		</section>		
-	</body>
-</html>
-
-
+<Layout>
+	<section class="py-20">
+    <h1>Js Technologies</h1>
+    <div class="container px-4 mx-auto flex flex-col gap-8">
+    <ul class="grid grid-cols-[repeat(auto-fit,minmax(320px,1fr))] gap-6">
+        <!--Recorremos data, con JavaScript para presentar la Card depediendo de los datos que haya.
+		Por cada elemento, indicando que es un object recuperado de la data, se devuelve un Card al que se le pasa los valores de elemento-->
+        {data.map((elemento: object) => {
+            return <Card data={elemento} />;
+        })
+        }
+	</ul>
+    </div>
+	</section>
+</Layout>
