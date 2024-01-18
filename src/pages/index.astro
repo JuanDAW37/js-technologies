@@ -11,7 +11,12 @@ const response = await fetch("http://localhost:4321/data.json");
 const data = await response.json();
 ---
 
-<Layout>
+<Layout
+url="http://localhost:4321"
+title = "Js Tecnologies, la mejor librería para JavaScript"
+description = ""
+image ="https://www.svgrepo.com/show/349419/javascript.svg"
+>
 	<section class="py-20">
     <h1>Js Technologies</h1>
     <div class="container px-4 mx-auto flex flex-col gap-8">
