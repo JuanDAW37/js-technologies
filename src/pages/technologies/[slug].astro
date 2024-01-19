@@ -1,0 +1,98 @@
+---
+import type { GetStaticPaths } from "astro";
+import Layout from '../../layouts/Layout.astro'
+export interface Technology {
+    id:          number;
+    title:       string;
+    slug:        string;
+    subtitle:    string;
+    description: string;
+    content?:    string;
+    image:       string;
+    url:         string;
+    github:      string;
+}
+
+//Así le digo que se prerrenderizen las páginas, ya que trabaja en modo hybrid, sirve también para modo server
+export const prerender = true;
+
+//Esto son rutas estáticas, con la propiedad slug, se crea el endpoint de la ruta estática
+export const getStaticPaths = (async () =>{
+    //Fetching de data
+    const response = await fetch("http://localhost:4321/data.json");
+    const data = await response.json();
+    return data.map((element: Technology) => ({
+        params: { slug: element.slug },
+        //Así devuelve el elemento que coincida con la ruta
+        props: element
+    }));    
+}) satisfies GetStaticPaths;
+
+//Dentro de astro.config.mjs, usando output: hybrid o server, podemos decirle que las páginas serán dinámicas con server 
+//y dinámicas / estáticas con hybrid 
+//También se puede hacer las rutas dinámicas de esta forma, para ello, por cada ruta dinámica, se crea una estática.
+/*export async function getStaticPaths() {
+    //Fetching de data
+    const response = await fetch("http://localhost:4321/data.json");
+    const data = await response.json(); 
+    //element es de tipo Technology
+    return data.map((element: Technology) => ({
+        params: { slug: element.slug },
+        //Así devuelve el elemento que coincida con la ruta
+        props: element
+    }));
+}*/
+//Con esto recupero los parámetros declarados en params, como id, title, slug, subtitle, etc...
+//Así se hace un tipado diciendo que props es de tipo Technology
+const {props: 
+    {id,
+    slug,
+    title,
+    subtitle,
+    description,
+    content,
+    image,
+    url,
+    github},
+}: {props : Technology } = Astro;
+---
+
+<Layout
+url=`http://localhost:4321/${slug}`
+title = {title}
+description = {description}
+image ={image}
+>
+	<section class="py-20">    
+    <article class="container px-4 mx-auto flex flex-col gap-8">    
+        <a href={url} class="text-sky-500 text-4xl- font-black text-center"><h1>{title}</h1></a>
+        <h2 class="text-zinc-400 text-2xl font-black text-center">{subtitle}</h2>
+        <p>{description}</p>
+        <p>{content}</p>
+        <article class="flex flex-col items-center gap-2">
+            <img
+            src={image}
+            alt={title}  
+            width="256"
+            height="256"
+            loading="lazy"
+            class="w-64 h-64 mx-auto object-contain">
+            <div class="flex gap-2">
+                <a
+                href={url}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="px-2 py-0 5 mt-auto border-2 rounded-lg border-sky-500 bg-transparent font-semibold text-center transition-all hover:bg-sky-500 hover:brightness-125"
+                >Página</a>
+                <a 
+                href={github}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="px-2 py-0 5 mt-auto border-2 rounded-lg border-sky-500 bg-transparent font-semibold text-center transition-all hover:bg-sky-500 hover:brightness-125"
+                >Github</a>
+            </div>
+        </article>        
+    </article>    
+	</section>    
+</Layout>
+

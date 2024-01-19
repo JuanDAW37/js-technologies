@@ -1,4 +1,5 @@
 ---
+import { ViewTransitions } from "astro:transitions";
 import Header from "../components/Header.astro";
 import "../styles/css/index.css";
 let { url, title, description, image } = Astro.props;
@@ -27,7 +28,9 @@ image || image === "https://www.svgrepo.com/show/349419/javascript.svg";
     <meta property="twitter:image" content={image} />
 	<link rel="canonical" href={url}>
 	<meta name="generator" content={Astro.generator} />   
-	<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+	<link rel="shotcut icon" type="image/svg+xml" href="/favicon.svg" />
+  <!--Usar ViewTransitions simula una SPA -->
+  <ViewTransitions/>
   </head>
   <body>
     <Header />
