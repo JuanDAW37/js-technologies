@@ -65,18 +65,21 @@ image ={image}
 >
 	<section class="py-20">    
     <article class="container px-4 mx-auto flex flex-col gap-8">    
-        <a href={url} class="text-sky-500 text-4xl- font-black text-center"><h1>{title}</h1></a>
-        <h2 class="text-zinc-400 text-2xl font-black text-center">{subtitle}</h2>
-        <p>{description}</p>
+        <a href={url} class="text-sky-500 text-4xl- font-black text-center" transition:name={`technology-title-${id}`}><h1>{title}</h1></a>
+        <h2 class="text-zinc-400 text-2xl font-black text-center" transition:name={`technology-subtitle-${id}`}>{subtitle}</h2>
+        <p transition:name={`technology-description-${id}`}>{description}</p>
         <p>{content}</p>
         <article class="flex flex-col items-center gap-2">
-            <img
-            src={image}
-            alt={title}  
-            width="256"
-            height="256"
-            loading="lazy"
-            class="w-64 h-64 mx-auto object-contain">
+            <a href={url} target="_blank" rel="noopener noreferrer">
+                <img
+                src={image}
+                alt={title}  
+                width="256"
+                height="256"
+                loading="lazy"
+                class="w-64 h-64 mx-auto object-contain"
+                transition:name={`technology-image-${id}`}>
+            </a>            
             <div class="flex gap-2">
                 <a
                 href={url}
