@@ -1,3 +1,6 @@
+---
+import ButtonLike from "./ButtonLike"
+---
 <header class="fixed z-50 top-0 w-full bg-sky-500">
     <nav class="py-4">
         <div class="container px-4 mx-auto flex items-center justify-between">
@@ -20,6 +23,9 @@
                     Juan</a>						
                 </li>
             </ul>
+            <ButtonLike transition:name="BotonLike" transition:persist client:visible/><!--Con esto, generamos una isla en Astro y podemos ver los
+            console.log en la consola del navegador y con transition:name y transition:persist damos persistencia para que guardar los like de cada 
+            una de las tecnologías-->
         </div>
     </nav>
 </header>	
