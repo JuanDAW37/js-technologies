@@ -7,12 +7,12 @@ import "../styles/css/index.css";
 //import {data} from "../utils/dataUtils"
 
 //Fetching de data
-const response = await fetch("http://localhost:4321/data.json");
+const response = await fetch(`${import.meta.env.FRONTEND_URL}/data.json`);
 const data = await response.json();
 ---
 
 <Layout
-url="http://localhost:4321"
+url={import.meta.env.FRONTED_URL}
 title = "Js Tecnologies, la mejor librería para JavaScript"
 description = ""
 image ="https://www.svgrepo.com/show/349419/javascript.svg"

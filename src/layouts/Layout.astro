@@ -3,7 +3,7 @@ import { ViewTransitions } from "astro:transitions";
 import Header from "../components/Header.astro";
 import "../styles/css/index.css";
 let { url, title, description, image } = Astro.props;
-url || (url = "http://localhost:4321");
+url || (url = import.meta.env.FRONTEND_URL);
 title || (title = "Js Tecnologies, la mejor librería para JavaScript");
 description || (description = "");
 image || image === "https://www.svgrepo.com/show/349419/javascript.svg";

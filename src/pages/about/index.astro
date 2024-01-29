@@ -2,7 +2,7 @@
 import Layout from '../../layouts/Layout.astro';
 ---
 <Layout
-url="http://localhost:4321/about"
+url=`${import.meta.env.FRONTEND_URL}/about`
 title = "About Js Tecnologies, la mejor librería para JavaScript"
 description = ""
 image ="https://www.svgrepo.com/show/349419/javascript.svg">
